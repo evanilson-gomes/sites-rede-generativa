@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meu Site - Esqueci minha Senha</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 200px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+    </header>
+
+    <div class="container">
+        <h2>Esqueci minha Senha</h2>
+        <input type="text" id="email" placeholder="Informar o e-mail cadastrado">
+        <button onclick="resetPassword()">Redefinir Senha</button>
+    </div>
+
+    <script>
+        function resetPassword() {
+            var email = document.getElementById("email").value;
+
+            if (email !== "") {
+                alert("O link para redifinir a senha foi enviado para o e-mail informado.");
+                window.location.href = "index.html";
+            } else {
+                alert("Por favor, informe o e-mail cadastrado.");
+            }
+        }
+    </script>
+</body>
+
+</html>
